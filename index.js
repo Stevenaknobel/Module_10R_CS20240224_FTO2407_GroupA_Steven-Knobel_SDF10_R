@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://real-time-database-5c238-default-rtdb.firebaseio.com/"
-import { getDatabase, ref, push, onValue } from "https://real-time-database-5c238-default-rtdb.firebaseio.com/"
+import { getDatabase, ref, push, onValue, remove } from "https://real-time-database-5c238-default-rtdb.firebaseio.com/"
 
 const appSettings = {
     databaseURL: "https://real-time-database-5c238-default-rtdb.firebaseio.com/"
@@ -25,19 +25,24 @@ addButtonEl.addEventListener("click", function()
  })
 
  onValue(shoppingListInDB, function(snapshot) {
-    let itemsArray = Object.entries(snapshot.val())
-   
-    clearShoppingListEl()
-   
-    for (let i = 0; i < itemsArray.length; i++) {
-        let currentItem = itemsArray[i]
-        let currentItemID = currentItem[0]
-        let currentItemValue = currentItem[1]
 
-
-        appendItemToShoppingListEl(itemsArray[i])
+    if (snapshot.exists()) {
+        let itemsArray = Object.entries(snapshot.val())
+   
+        clearShoppingListEl()
+       
+        for (let i = 0; i < itemsArray.length; i++) {
+            let currentItem = itemsArray[i]
+            let currentItemID = currentItem[0]
+            let currentItemValue = currentItem[1]
     
-    }
+    
+            appendItemToShoppingListEl(currentItem)
+        
+        }    
+    } else {
+        shoppingListEl.innerHTML = "No items here"
+   
 })
 
 function clearShoppingListEl() {
@@ -52,7 +57,18 @@ function clearShoppingListEl() {
     let itemValue = item[1]
      let newEl = document.createElement("li")
     
-    newEl.textContent = "Something"
+    newEl.textContent = itemValue
+
+    shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+
+    newEl.addEventListener("click", function() {
+        
+        let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
+        
+        remove(exactLocationOfItemInDB)
+
+    })
+    
     shoppingListEl.append(newEl)
  }
 
