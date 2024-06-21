@@ -32,7 +32,7 @@ addButtonEl.addEventListener("click", function() {
    
         clearShoppingListEl()
     }
-       
+}
         for (let i = 0; i < itemsArray.length; i++) {
             let currentItem = itemsArray[i]
             let currentItemID = currentItem[0]
@@ -43,7 +43,7 @@ addButtonEl.addEventListener("click", function() {
         
         }    
      'else', {
-        shoppingListEl,innerHTML = "No items here"
+        shoppingListElinnerHTML = "No items here"
    
 })
 
