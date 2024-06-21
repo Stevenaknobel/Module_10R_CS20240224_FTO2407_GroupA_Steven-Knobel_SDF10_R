@@ -43,9 +43,8 @@ addButtonEl.addEventListener("click", function() {
         
         }    
      'else', {
-        shoppingListElinnerHTML = "No items here"
-   
-})
+        shoppingListElinnerHTML = "No items here"}
+    )
 
 function clearShoppingListEl() {
     shoppingListEl.innerHTML = ""
