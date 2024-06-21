@@ -42,8 +42,8 @@ addButtonEl.addEventListener("click", function() {
             appendItemToShoppingListEl(currentItem)
         
         }    
-    } 'else', {
-        shoppingListEl.innerHTML = "No items here"
+     'else', {
+        shoppingListEl,innerHTML = "No items here"
    
 })
 
