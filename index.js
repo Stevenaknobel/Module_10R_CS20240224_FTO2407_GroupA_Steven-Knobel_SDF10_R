@@ -21,6 +21,7 @@
      clearInputFieldEl()
  })
  
+
  onValue(shoppingListInDB, function(snapshot) {
      if (snapshot.exists()) {
          let itemsArray = Object.entries(snapshot.val())
@@ -43,6 +44,8 @@
      shoppingListEl.innerHTML = ""
  }
  
+ 
+
  function clearInputFieldEl() {
      inputFieldEl.value = ""
  }
