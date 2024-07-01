@@ -1,4 +1,16 @@
- import { initializeApp } from "https://real-time-database-5c238-default-rtdb.firebaseio.com/shoppingListInDB%3B"
+var firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  databaseURL: "YOUR_DATABASE_URL",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+import { initializeApp } from "https://real-time-database-5c238-default-rtdb.firebaseio.com/shoppingListInDB%3B"
  import { getDatabase, ref, push, onValue, remove } from "https://real-time-database-5c238-default-rtdb.firebaseio.com/shoppingListInDB%3B"
  
  const appSettings = {
