@@ -1,30 +1,44 @@
 var firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  databaseURL: "YOUR_DATABASE_URL",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+   apiKey: "AIzaSyAZ7AAGPjuPsJyYZLnAuPcSGDkEINRGZz0",
+    authDomain: "real-time-database-5c238.firebaseapp.com",
+    databaseURL: "https://real-time-database-5c238-default-rtdb.firebaseio.com",
+    projectId: "real-time-database-5c238",
+    storageBucket: "real-time-database-5c238.appspot.com",
+    messagingSenderId: "1030627552410",
+    appId: "1:1030627552410:web:790760877a0e1422ef4323",
+    measurementId: "G-CMN2EL2FJR"
 };
 
 firebase.initializeApp(firebaseConfig);
 
-import { initializeApp } from "https://real-time-database-5c238-default-rtdb.firebaseio.com/shoppingListInDB%3B"
- import { getDatabase, ref, push, onValue, remove } from "https://real-time-database-5c238-default-rtdb.firebaseio.com/shoppingListInDB%3B"
- 
- const appSettings = {
-     databaseURL: "https://real-time-database-5c238-default-rtdb.firebaseio.com/shoppingListInDB%3B//"
- }
- 
+<script type="module">
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAZ7AAGPjuPsJyYZLnAuPcSGDkEINRGZz0",
+    authDomain: "real-time-database-5c238.firebaseapp.com",
+    databaseURL: "https://real-time-database-5c238-default-rtdb.firebaseio.com",
+    projectId: "real-time-database-5c238",
+    storageBucket: "real-time-database-5c238.appspot.com",
+    messagingSenderId: "1030627552410",
+    appId: "1:1030627552410:web:790760877a0e1422ef4323",
+    measurementId: "G-CMN2EL2FJR"
+  };
+
+  // Initialize Firebase
+ const app = initializeApp(firebaseConfig);
+ const analytics = getAnalytics(app);
  const app = initializeApp(appSettings)
  const database = getDatabase(app)
  const shoppingListInDB = ref(database, "shoppingList")
- 
  const inputFieldEl = document.getElementById("input-field")
  const addButtonEl = document.getElementById("add-button")
  const shoppingListEl = document.getElementById("shopping-list")
- 
+
+   </script> 
+
  addButtonEl.addEventListener("click", function() {
      let inputValue = inputFieldEl.value
      
