@@ -24,10 +24,13 @@ firebase.initializeApp(firebaseConfig);
     storageBucket: "real-time-database-5c238.appspot.com",
     messagingSenderId: "1030627552410",
     appId: "1:1030627552410:web:790760877a0e1422ef4323",
-    measurementId: "G-CMN2EL2FJR"
-  };
+    measurementId: "G-CMN2EL2FJR",
+  }
+  
+  
+  
 
-  // Initialize Firebase
+
  const app = initializeApp(firebaseConfig);
  const analytics = getAnalytics(app);
  const app = initializeApp(appSettings)
