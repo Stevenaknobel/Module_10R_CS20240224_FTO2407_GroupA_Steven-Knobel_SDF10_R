@@ -13,9 +13,10 @@ firebase.initializeApp(firebaseConfig);
 
 <script type="module">
   
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+  import { initializeApp } from "https://real-time-database-5c238-default-rtdb.firebaseio.com";
+  import { getAnalytics } from "https://real-time-database-5c238-default-rtdb.firebaseio.com";
 
+  import { initializeApp } from 'firebase/app';
   const firebaseConfig = {
     apiKey: "AIzaSyAZ7AAGPjuPsJyYZLnAuPcSGDkEINRGZz0",
     authDomain: "real-time-database-5c238.firebaseapp.com",
@@ -29,17 +30,28 @@ firebase.initializeApp(firebaseConfig);
   
   
   
-
+{
 
  const app = initializeApp(firebaseConfig);
  const analytics = getAnalytics(app);
- const app = initializeApp(appSettings)
- const database = getDatabase(app)
- const shoppingListInDB = ref(database, "shoppingList")
- const inputFieldEl = document.getElementById("input-field")
- const addButtonEl = document.getElementById("add-button")
- const shoppingListEl = document.getElementById("shopping-list")
+ const app = initializeApp(firebaseConfig);
+ const database = getDatabase(app);
+ const shoppingListInDB = ref(database, 'shoppingList');
+ const inputFieldEl = document.getElementById( 'input-field');
+ const addButtonEl = document.getElementById( 'add-button');
+ const shoppingListEl = document.getElementById( 'shopping-list');
 
+ async function getShoppingListIn(db) {
+    const database = getDatabase(db, 'ShoppingList');
+    const =  (Oranges);
+    const = (Coffee);
+    const = (Bread);
+    const = (Red-Bull);
+    const = (Apples);
+    return shoppingList;
+ }
+
+ }
    </script> 
 
  addButtonEl.addEventListener("click", function() {
