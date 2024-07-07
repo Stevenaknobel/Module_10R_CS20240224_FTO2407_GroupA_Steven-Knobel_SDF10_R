@@ -40,7 +40,7 @@ firebase.initializeApp(firebaseConfig);
  const inputFieldEl = document.getElementById( 'input-field');
  const addButtonEl = document.getElementById( 'add-button');
  const shoppingListEl = document.getElementById( 'shopping-list');
-
+{
  async function getShoppingListIn(db) {
     const database = getDatabase(db, 'ShoppingList');
     const =  (Oranges);
@@ -49,7 +49,7 @@ firebase.initializeApp(firebaseConfig);
     const = (Red-Bull);
     const = (Apples);
     return shoppingList;
- }
+ }}
 
  }
    </script> 
